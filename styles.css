@@ -1,45 +1,204 @@
 body {
-    background-image: url("nahele.png");
-    height: 100%;
+    background-color: rgba(137,199,231, 0.6);
+}
+
+
+.topnav {
+    top: 0px;
+    background-color:rgba(137,199,231, 0.6);
+}
+
+.topnav a{
+    
+    color:#f2f2f2;
+    font-size: 35px;
+    text-decoration: none;
+    padding: 14px 16px;
+    text-align: center;
+    
+}
+
+.menu-header {
+    /*
+    rgba(51,51,51,1)
+    */
+    color: rgba(255,255,255,1);
+    text-align: center;
+    margin: 5% 30% 2% 30%;
+    padding: 0px 10px;
+    /*
+    rgba(255, 255, 0, 0.5)
+    */
+}
+
+.item-name {
+
+    color: rgba(51,51,51,1);
+    font-size: 25px;
+    margin-left: 5%;
+
+}
+
+.item-price {
+
+    border-radius: 25px;
+    background-color: rgba(202, 236, 253, 0.6);
+    width: 60px;
+    height: 30px;
+    color: rgba(51,51,51,1);
+    float: right;
+    font-size: 25px;
+    text-align: center;
+    margin-right: 5%;
+
+}
+
+.item-desc {
+
+    margin-left: 5%;
+
+}
+
+#menu {
+    /*
+    rgba(51,51,12,0.5)
+    */
+    
+    background-color:rgba(250, 249, 246, 1);
+    /*rgba(137,199,231, 0.5);
+    */
+    margin: 2% 10%;
+    padding: 2% 0px;
+}
+
+div.topnav:hover {
+    background-color: rgba(137,199,255, 1);
+}
+
+a.hovered-nav:hover {
+    background-color: rgba(250, 249, 246, 1);
+    color: rgba(51,51,51,1);
+}
+
+.background-photo {
+    margin-top: 0px;
+    max-width: 100%;
+    background-image: url("katsu.png");
+    height: 800px;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
 
-table, th, td {
-    border: 1px solid;
-    border-color: transparent;
+.bottom-left {
+    text-align: left;
+    background-color: rgba(137,199,255, 1);
+    width: 200px;
 }
 
-table {
-    width: 65%;
-    margin-left:auto;
-    margin-right:auto;
+.bottom-right {
+    background-color: rgba(137,199,255, 1);
+    max-width: 100%;
+    text-align: right;
 }
 
-th, td {
-    background-color: #FFC463;
+footer {
+    padding-left: 35%;
+    background-color: rgba(137,199,255, 1);
 }
 
-td, li {
+.footer-nav {
+    text-decoration: none;
+}
+/*
+ABOUT US  and CONTACT US PAGE
+*/
+
+
+.shavedice {
+    max-width: 100%;
+}
+
+.white_table {
+    margin-top: 5%;
+    margin-bottom: 0%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color:rgba(250, 249, 246, 1);
+    width: 80%;
+}
+
+.white_table_about {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color:rgba(250, 249, 246, 1);
+    width: 80%;
+}
+
+.shavedice_text {
     text-align: center;
+    margin-top: 10%;
+    margin-bottom: 40%;
+    max-width: 40%;
 }
 
-ul li {
-    text-align:center;
-    list-style-position:inside;
+.intro {
+    font-size: 24px;
+    font-size: 4vw;
+    line-height: 0;
 }
 
-body {
-    background-color: black;
+.desc {
+    padding: 2%;
+    font-size: 16px;
+    font-size: 2vw;
+    text-decoration: none;
 }
 
-.nahele {
-    margin-left: auto;
-    margin-right: auto;
+.semi-line {
+    width: 80%
 }
 
-.corner {
-    margin-left: 300px;
-    margin-right: 20px;
+
+/*
+CONTACT US PAGE
+*/
+
+.blocky {
+    display: block;
+    margin-left: 40%;
+}
+
+.blocky_message {
+    display: inline;
+    margin-left: 37%;
+    max-width: 50%;
+}
+
+.small-form {
+    background-color:rgba(250, 249, 246, 1);
+    width: 50%;
+    margin-left: 23%;
+    margin-right: 15%;
+}
+
+.contact_intro {
+    font-size: 2vw;
+    margin-left: 25%;
+}
+
+.contact_intro2 {
+    font-size: 2vw;
+    margin-left: 35%;
+}
+
+.small-close-form {
+    background-color:rgba(250, 249, 246, 1);
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 0;
+    margin-bottom: 5%;
 }
