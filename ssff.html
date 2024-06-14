@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Summary Sheet Format Fill</title>
+    <style>
+        /* Apply the CSS rules you provided */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-top: 20px;
+        }
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        input[type="button"] {
+            background-color: #2196F3;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="button"]:hover {
+            background-color: #1976D2;
+        }
+        pre {
+            font-family: Consolas, monospace;
+            white-space: pre-wrap;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Summary Sheet Format Fill</h1>
+    <form id="utilityForm">
+        <textarea id="utilitiesInput" rows="5" cols="50" placeholder="Enter utilities (separated by commas)"></textarea>
+        <br>
+        <input type="button" value="Generate Output" onclick="generateOutput()">
+        <input type="button" value="Back to Home" onclick="goToHome()">
+    </form>
+    <pre id="output"></pre> <!-- Display the output here -->
+    
+    <script>
+        function generateOutput() {
+            const utilitiesInput = document.getElementById("utilitiesInput").value;
+            const outputResult = generateUtilityCells(utilitiesInput); // Call your processing function
+            
+            // Display the output
+            document.getElementById("output").textContent = outputResult;
+        }
+
+        // Your existing utility generation function (JavaScript version)
+        function generateUtilityCells(utilities) {
+            // Split the utilities by commas
+            const utilityList = utilities.split(",");
+            
+            // Initialize output string
+            let output = "";
+            
+            // Define the column letters (G to Q)
+            const columns = ["H", "I", "J", "K", "L", "M", "N", "O", "P", "Q"];
+            
+            // Iterate over each utility and generate output
+            utilityList.forEach((utility) => {
+                output += `='${utility}' !G2\t`;
+                output += "\t";
+                columns.forEach((column) => {
+                    output += `='${utility}' !${column}2\t`;
+                });
+                output += "\n";
+            });
+            
+            return output.trim();
+        }
+
+        // Function to navigate back to index.html (replace with your actual URL)
+        function goToHome() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
