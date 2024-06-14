@@ -1,0 +1,42 @@
+City of Beaverton,City of Bend,City of Corvallis,City of Gresham,City of Hillsboro,City of Medford,City of Portland,City of Salem,City of Springfield (OR),City of Tigard,Eugene,Tualatin Valley Water District
+
+
+City of Beaverton
+City of Bend
+City of Corvallis
+City of Gresham
+City of Hillsboro
+City of Medford
+City of Portland
+City of Salem
+City of Springfield (OR)
+City of Tigard
+Eugene
+Tualatin Valley Water District
+
+
+def generateUtilityCells(utilities):
+    # Split the utilities by newlines
+    utilityList = utilities.split("\n")
+    
+    # Initialize output string
+    output = ""
+    
+    # Define the column letters (G to Q)
+    columns = ["G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q"]
+    
+    # Iterate over each utility and generate output
+    for utility in utilityList:
+        utility = utility.strip()  # Remove leading/trailing spaces
+        for column in columns:
+            output += f"='{utility}' !{column}2\t"
+        output += "\n"
+    
+    return output.strip()  # Remove trailing newline
+
+
+# Call the function with the example input
+output_result = generateUtilityCells(input_utilities)
+
+# Print the output
+print(output_result)
